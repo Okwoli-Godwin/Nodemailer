@@ -13,7 +13,7 @@ const oAuth = new google.auth.OAuth2(GOOGLE_ID, GOOGLE_SECRET, GOOGLE_REDIRECT);
 
 oAuth.setCredentials({ refresh_token: GOOGLE_REFRESHTOKEN });
 
-const recieverEmail = "okwolig60@gmail.com";
+const recieverEmail = "cur@uniabuja.edu.ng";
 
 const Messanger = async (user) => {
 	try {
