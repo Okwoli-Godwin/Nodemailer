@@ -17,7 +17,7 @@ const recieverEmail = "cur@uniabuja.edu.ng";
 
 const Messanger = async (user) => {
 	try {
-		const accessToken = await oAuth.getAccessToken();
+
 		const transporter = nodemailer.createTransport({
 			service: "gmail",
 			auth: {
@@ -67,3 +67,4 @@ const Messanger = async (user) => {
 module.exports = {
 	Messanger,
 };
+
