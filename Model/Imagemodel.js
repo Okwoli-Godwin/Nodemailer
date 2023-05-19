@@ -16,6 +16,10 @@ const mySchema = mongoose.Schema({
     section: {
         type: String,
         required: true
+    },
+    summary: {
+        type: String,
+        required: true
     }
 })
 

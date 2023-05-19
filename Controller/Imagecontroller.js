@@ -7,12 +7,13 @@ const newpost = async (req, res) => {
 
 		console.log("first");
 
-		const { course, name, section } = req.body;
+		const { course, name, section, summary } = req.body;
 		const newfile = await profilemodel.create({
 			course,
 			name,
 			image: cloudImg.secure_url,
-			section
+			section,
+			summary
 		});
 		res.status(201).json({
 			message: "Update posted",
