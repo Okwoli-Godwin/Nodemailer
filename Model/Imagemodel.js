@@ -6,10 +6,16 @@ const mySchema = mongoose.Schema({
         required: true
     },
     image: {
-        type: String
+        type: String,
+        required: true
     },
     name: {
-        type: String
+        type: String,
+        required: true
+    },
+    section: {
+        type: String,
+        required: true
     }
 })
 
