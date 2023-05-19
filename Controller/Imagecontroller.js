@@ -43,4 +43,20 @@ const getpost = async (req, res) => {
 	}
 };
 
-module.exports = { getpost, newpost };
+const Delete = async (req, res) => {
+	try {
+		const deletepost = await profilemodel.findByIdAndDelete(req.params.id)
+
+		res.status(201).json({
+			message: "Upload deleted",
+			data: deletepost
+		})
+	} catch (error) {
+		res.status(400).json({
+			message: "failed to delete",
+			data: error.message
+		})
+	}
+}
+
+module.exports = { getpost, newpost, Delete };
